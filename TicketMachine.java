@@ -103,22 +103,27 @@ public class TicketMachine {
         int n=95;
         int s=100;
         int m=105;
-        do {
+       do {
             System.out.println("Enter your city, please:");
             answer = myScanner.nextLine();
             if (answer.equals("London")) {
-                System.out.println(a);
-                System.out.println("Please pay");
+                System.out.println("Please pay " + a);
                 int g;
                 g=myScanner.nextInt();
                 int f=a-g;
                 int z = g - a;
                 if (g<15){
-                    System.out.println("please add" + f);                 
-                }               
-                else {  System.out.println("Here is your change" + z);                                                         
+                    System.out.println("please add " + f);
+                    f=myScanner.nextInt();
+                    int change=f-a;
+                if(change<=0){
+                       break;
+            }}               
+                else {  System.out.println("Here is your change: " + z);                                                         
                 }
-            }              
+                   if(f<=0){
+                       break;
+            }}           
 
             if (answer.equals("Manchester")) {
                 System.out.println(b);
